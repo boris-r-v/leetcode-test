@@ -13,7 +13,11 @@ TEST(PalindromTest, palindrome_trivial_test) {
     EXPECT_EQ( s.longest_palindrome_trivial("babad"), "aba");
 
 }
+TEST(PalindromTest, palindrome_MAXimal_test) {
+    Palindrome_Solution s;
+    EXPECT_EQ( s.longest_palindrome_from_MAXimal("babad"), "aba");
 
+}
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
