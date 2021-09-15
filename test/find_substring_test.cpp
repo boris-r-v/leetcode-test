@@ -11,7 +11,7 @@ using namespace std;
 
 
 TEST(FindSubstringTest, find_z_func_trivial) {
-    Solution s;
+    Z_function_Solution s;
     EXPECT_THAT( s.find_z_func_trivial("aaaaa"), ::testing::ElementsAre(0,4,3,2,1));
     EXPECT_THAT( s.find_z_func_trivial("aaabaab"), ::testing::ElementsAre(0,2,1,0,2,1,0));
     EXPECT_THAT( s.find_z_func_trivial("abacaba"), ::testing::ElementsAre(0,0,1,0,3,0,1));
@@ -19,7 +19,7 @@ TEST(FindSubstringTest, find_z_func_trivial) {
 }
 
 TEST(FindSubstringTest, find_z_func_On) {
-    Solution s;
+    Z_function_Solution s;
     EXPECT_THAT( s.find_z_func_On("aaaaa"), ::testing::ElementsAre(0,4,3,2,1));
     EXPECT_THAT( s.find_z_func_On("aaabaab"), ::testing::ElementsAre(0,2,1,0,2,1,0));
     EXPECT_THAT( s.find_z_func_On("abacaba"), ::testing::ElementsAre(0,0,1,0,3,0,1));
@@ -28,7 +28,7 @@ TEST(FindSubstringTest, find_z_func_On) {
     EXPECT_THAT( s.find_z_func_On("abababab"), ::testing::ElementsAre(0,0,6,0,4,0,2,0));
 }
 TEST(FindSubstringTest, find_z_func_On_from_book) {
-    Solution s;
+    Z_function_Solution s;
     EXPECT_THAT( s.find_z_func_On_from_book("aaaaa"), ::testing::ElementsAre(0,4,3,2,1));
     EXPECT_THAT( s.find_z_func_On_from_book("aaabaab"), ::testing::ElementsAre(0,2,1,0,2,1,0));
     EXPECT_THAT( s.find_z_func_On_from_book("abacaba"), ::testing::ElementsAre(0,0,1,0,3,0,1));
@@ -49,23 +49,23 @@ std::string random_string()
 }
 string str(random_string());
 TEST(FindSubstringTest, find_z_func_trivial_benchmark) {
-    Solution s;
+    Z_function_Solution s;
     s.find_z_func_trivial(str);
     EXPECT_EQ( 2, 2);
 }
 TEST(FindSubstringTest, find_z_func_On_benchmark) {
-    Solution s;
+    Z_function_Solution s;
     s.find_z_func_On(str);
     EXPECT_EQ( 2, 2);
 }
 TEST(FindSubstringTest, find_z_func_On_from_book_benchmark) {
-    Solution s;
+    Z_function_Solution s;
     s.find_z_func_On_from_book(str);
     EXPECT_EQ( 2, 2);
 }
 
 TEST(FindSubstringTest, find_z_func_is_equal_result) {
-    Solution s;
+    Z_function_Solution s;
     EXPECT_EQ( s.find_z_func_On_from_book(str), s.find_z_func_On(str) );
     EXPECT_EQ( s.find_z_func_On_from_book(str), s.find_z_func_trivial(str) );
 }

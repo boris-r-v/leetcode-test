@@ -23,7 +23,7 @@
 #include <vector>
 
 using namespace std;
-class Solution
+class Z_function_Solution
 {
 public:
     vector<int> find_z_func_trivial(string s);
@@ -31,7 +31,7 @@ public:
     vector<int> find_z_func_On_from_book(string s);
 };
 
-vector<int> Solution::find_z_func_trivial(string s) {
+vector<int> Z_function_Solution::find_z_func_trivial(string s) {
     auto n = s.size();
     vector<int> d (n, 0);
 
@@ -42,7 +42,7 @@ vector<int> Solution::find_z_func_trivial(string s) {
     //cout << "d: {"; for (auto i : d ) cout << i << (--n ? ", " : "}\n");
     return d;
 }
-vector<int> Solution::find_z_func_On(string s){
+vector<int> Z_function_Solution::find_z_func_On(string s){
     auto n = s.size();
     vector<int> d (n, 0);
 
@@ -72,7 +72,8 @@ vector<int> Solution::find_z_func_On(string s){
     //cout << "d: {"; for (auto i : d ) cout << i << (--n ? ", " : "}\n");
     return d;
 }
-vector<int> Solution::find_z_func_On_from_book(string s) {
+vector<int> Z_function_Solution::find_z_func_On_from_book(string s) {
+    //// Описание алгоритма в http://e-maxx.ru/algo/z_function
     int n = s.size();
     vector<int> Z (n, 0);
     for (int k=1, l=0, r=0; k < n; ++k) {

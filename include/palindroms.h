@@ -9,12 +9,12 @@
 #include <string>
 
 using namespace std;
-class Solution {
+class Palindrome_Solution {
         public:
-        string longestPalindrome(string s);
+        string longest_palindrome_trivial(string s);
 };
 
-string Solution::longestPalindrome(string s) {
+string Palindrome_Solution::longest_palindrome_trivial(string s) {
     return "aba";
 }
 #endif //UNTITLED_PALINDROMS_H

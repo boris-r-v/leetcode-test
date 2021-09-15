@@ -7,15 +7,10 @@
 
 
 using namespace std;
-string run_pol(string s)
-{
-    Solution solution;
-    return solution.longestPalindrome( s );
 
-}
-
-TEST(PalindromTest, leetcode_test) {
-    EXPECT_EQ( run_pol("babad"), "aba");
+TEST(PalindromTest, palindrome_trivial_test) {
+    Palindrome_Solution s;
+    EXPECT_EQ( s.longest_palindrome_trivial("babad"), "aba");
 
 }
 
