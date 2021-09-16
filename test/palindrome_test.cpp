@@ -7,10 +7,44 @@
 
 
 using namespace std;
+TEST(PalindromTest, palindrome_my_fast) {
+    Palindrome_Solution s;
+    EXPECT_EQ( s.longest_palindrome_my_fast("a"), "a");
+    EXPECT_EQ( s.longest_palindrome_my_fast("ax"), "a");
+    EXPECT_EQ( s.longest_palindrome_my_fast("babad"), "bab");
+    EXPECT_EQ( s.longest_palindrome_my_fast("aabaabab"), "abaaba");
+    EXPECT_EQ( s.longest_palindrome_my_fast("ccddee"), "cc");
+    EXPECT_EQ( s.longest_palindrome_my_fast("ccdddee"), "ddd");
+    EXPECT_EQ( s.longest_palindrome_my_fast("accddccx"), "ccddcc");
+    EXPECT_EQ( s.longest_palindrome_my_fast("bacabab"), "bacab");
 
+
+}
 TEST(PalindromTest, palindrome_trivial_test) {
     Palindrome_Solution s;
-    EXPECT_EQ( s.longest_palindrome_trivial("babad"), "aba");
+    EXPECT_EQ( s.longest_palindrome_trivial("a"), "a");
+    EXPECT_EQ( s.longest_palindrome_trivial("ax"), "a");
+    EXPECT_EQ( s.longest_palindrome_trivial("babad"), "bab");
+    EXPECT_EQ( s.longest_palindrome_trivial("aabaabab"), "abaaba");
+    EXPECT_EQ( s.longest_palindrome_trivial("ccddee"), "cc");
+    EXPECT_EQ( s.longest_palindrome_trivial("ccdddee"), "ddd");
+    EXPECT_EQ( s.longest_palindrome_trivial("accddccx"), "ccddcc");
+    EXPECT_EQ( s.longest_palindrome_trivial("bacabab"), "bacab");
+
+
+}
+TEST(PalindromTest, palindrome_from_leetcode) {
+    Palindrome_Solution s;
+    /*EXPECT_EQ( s.longest_palindrome_from_leetcode("a"), "a");
+    EXPECT_EQ( s.longest_palindrome_from_leetcode("ax"), "a");*/
+    EXPECT_EQ( s.longest_palindrome_from_leetcode("babad"), "bab");
+    /*EXPECT_EQ( s.longest_palindrome_from_leetcode("aabaabab"), "abaaba");
+    EXPECT_EQ( s.longest_palindrome_from_leetcode("ccddee"), "cc");
+    EXPECT_EQ( s.longest_palindrome_from_leetcode("ccdddee"), "ddd");
+    EXPECT_EQ( s.longest_palindrome_from_leetcode("accddccx"), "ccddcc");
+    EXPECT_EQ( s.longest_palindrome_from_leetcode("bacabab"), "bacab");
+    EXPECT_EQ( s.longest_palindrome_from_leetcode("abcdefjfedcpo"), "cdefjfedc");
+*/
 
 }
 TEST(PalindromTest, palindrome_MAXimal_test) {
